@@ -1,0 +1,11 @@
+This is a demo and test project for web static project.
+
+1. checkout out web-static:
+    git clone https://github.com/bulain/web-static.git
+    
+2. checkout out web-static-demo:
+    git clone https://github.com/bulain/web-static-demo.git
+
+3. build web-static-demo 
+    npm install
+    grunt

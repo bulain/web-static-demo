@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="/web-static/blueprint/css/screen.css" type="text/css" media="screen, projection"/>
+        <link rel="stylesheet" href="/web-static/blueprint/css/print.css" type="text/css" media="print"/>
+        <link rel="stylesheet" href="/web-static/jquery/css/validate/jquery.validate.css"/>
+        <script src="/web-static/jquery/js/jquery-1.4.2.js"></script>
+        <script src="/web-static/jquery/js/jquery.validate.js"></script>
+        <title>jquery validate demo</title>
+        <style>
+            fieldset{padding:0px; margin:0px 0px 0px -1px;}
+            fieldset label{margin-left:5px;}
+            #newsletter_topics{margin-left:5px;}
+        </style>
+    </head>
+    <body>
+<div class="container">
+<div class="span-14 last">
+<form class="cmxform" id="signupForm" method="post" action="">
+    <fieldset>
+        <legend>Validating a complete form</legend>
+        <div class="span-3"><label for="firstname">Firstname</label></div>
+        <div class="span-10 last"><input id="firstname" name="firstname" type="text"/></div>
+        <div class="span-3"><label for="lastname">Lastname</label></div>
+        <div class="span-10 last"><input id="lastname" name="lastname" type="text"/></div>
+        <div class="span-3"><label for="username">Username</label></div>
+        <div class="span-10 last"><input id="username" name="username" type="text"/></div>
+        <div class="span-3"><label for="password">Password</label></div>
+        <div class="span-10 last"><input id="password" name="password" type="password"/></div>
+        <div class="span-3"><label for="confirm_password">Confirm password</label></div>
+        <div class="span-10 last"><input id="confirm_password" name="confirm_password" type="password"/></div>
+        <div class="span-3"><label for="email">Email</label></div>
+        <div class="span-10 last"><input id="email" name="email" type="text"/></div>
+        
+        <div class="span-10 last">
+            <label for="agree">Please agree to our policy</label>
+            <input type="checkbox" class="checkbox error" id="agree" name="agree"/>
+        </div>
+        <div class="span-10 last">
+            <label for="newsletter">I'd like to receive the newsletter</label>
+            <input type="checkbox" class="checkbox" id="newsletter" name="newsletter"/>
+        </div>
+        <div class="span-10 last">
+        <fieldset id="newsletter_topics" class="gray">
+            <legend>Topics (select at least two)</legend>
+            <label for="topic_marketflash">
+                <input type="checkbox" id="topic_marketflash" value="marketflash" name="topic" disabled=""/>
+                Marketflash
+            </label>
+            <label for="topic_fuzz">
+                <input type="checkbox" id="topic_fuzz" value="fuzz" name="topic" disabled=""/>
+                Latest fuzz
+            </label>
+            <label for="topic_digester">
+                <input type="checkbox" id="topic_digester" value="digester" name="topic" disabled=""/>
+                Mailing list digester
+            </label>
+        </fieldset>
+        </div>
+        <div class="span-10 last">
+            <input class="submit" type="submit" value="Submit"/>
+            <input class="reset" type="reset" value="Reset"/>
+        </div>
+    </fieldset>
+</form>
+</div>
+</div>
+
+<script type="text/javascript"> 
+$.validator.setDefaults({
+    submitHandler: function() { alert("submitted!"); }
+});
+ 
+$(document).ready(function() {
+    // validate signup form on keyup and submit
+    var validator = $("#signupForm").validate({
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            username: {
+                required: true,
+                minlength: 2
+            },
+            password: {
+                required: true,
+                minlength: 5
+            },
+            confirm_password: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            topic: {
+                required: "#newsletter:checked",
+                minlength: 2
+            },
+            agree: "required"
+        },
+        messages: {
+            firstname: "Please enter your firstname",
+            lastname: "Please enter your lastname",
+            username: {
+                required: "Please enter a username",
+                minlength: "Your username must consist of at least 2 characters"
+            },
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            },
+            confirm_password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long",
+                equalTo: "Please enter the same password as above"
+            },
+            email: "Please enter a valid email address",
+            agree: "Please accept our policy"
+        },
+        errorClass: "verror"
+    });
+    
+    // propose username by combining first- and lastname
+    $("#username").focus(function() {
+        var firstname = $("#firstname").val();
+        var lastname = $("#lastname").val();
+        if(firstname && lastname && !this.value) {
+            this.value = firstname + "." + lastname;
+        }
+    });
+    
+    //code to hide topic selection, disable for demo
+    var newsletter = $("#newsletter");
+    // newsletter topics are optional, hide at first
+    var inital = newsletter.is(":checked");
+    var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+    var topicInputs = topics.find("input").attr("disabled", !inital);
+    // show when newsletter is checked
+    newsletter.click(function() {
+        topics[this.checked ? "removeClass" : "addClass"]("gray");
+        topicInputs.attr("disabled", !this.checked);
+    });
+    
+    $(".reset").click(function() {
+        validator.resetForm();
+    });
+});
+</script> 
+    </body>
+</html>

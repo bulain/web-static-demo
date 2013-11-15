@@ -1,0 +1,32 @@
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <def>
+        <filter id="contrast">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="2" intercept="-0.2" />
+                <feFuncG type="linear" slope="2" intercept="-0.2" />
+                <feFuncB type="linear" slope="2" intercept="-0.2" />
+            </feComponentTransfer>
+        </filter>
+        <filter id="brightness">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="1.5"/>
+                <feFuncG type="linear" slope="1.5"/>
+                <feFuncB type="linear" slope="1.5"/>
+            </feComponentTransfer>
+        </filter>
+        <filter id="dropshadow">
+            <feGaussianBlur stdDeviation="1" result="blur" in="SourceAlpha">
+            </feGaussianBlur>
+            <feComponentTransfer result="transferBlur">
+                <feFuncA slope="1" type="linear">
+                </feFuncA>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode in="transferBlur">
+                </feMergeNode>
+                <feMergeNode in="SourceGraphic">
+                </feMergeNode>
+            </feMerge>
+        </filter>
+    </def>
+</svg>

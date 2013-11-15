@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/web-static/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="/web-static/bootstrap/css/bootstrap-responsive.css"/>
+        <script src="/web-static/require/js/require.js"></script>
+        <script src="require.config.js"></script>
+        <title>Object Demo</title>
+        <style>
+        .v-item {border: 1px solid blue; border-width: 1px 0px 0px 0px;}
+        .v-item ol {margin-left: 35px;}
+        .v-block {border: 1px solid orange; border-width: 1px 0px 0px 0px;}
+        .v-header {border: 1px solid orange; border-width: 1px 0px 0px 0px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li><a href="#globel" data-toggle="tab">Globel</a></li>
+                <li><a href="#utils" data-toggle="tab">Utils</a></li>
+                <li><a href="#dom" data-toggle="tab">Dom</a></li>
+                <li><a href="#d3" data-toggle="tab">D3</a></li>
+                <li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+                <li class="active"><a href="#domCalc" data-toggle="tab">DomCalc</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="globel"></div>
+                <div class="tab-pane" id="utils"></div>
+                <div class="tab-pane" id="dom"></div>
+                <div class="tab-pane" id="d3"></div>
+                <div class="tab-pane" id="jquery"></div>
+                <div class="tab-pane active" id="domCalc"></div>
+            </div>
+        </div>
+        <script src="object.demo.js"></script>
+    </body>
+</html>
