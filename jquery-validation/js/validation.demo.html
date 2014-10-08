@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+        <link rel="stylesheet" href="/web-static/bootstrap/css/bootstrap.css"/>
+
+        <!--[if lt IE 9]>
+        <script src="/web-static/html5shiv/js/html5shiv.js"></script>
+        <script src="/web-static/respond/js/respond.src.js"></script>
+        <script src="/web-static/es5-shim/js/es5-shim.js"></script>
+        <![endif]-->
+
+        <title>jquery-validation Demo</title>
+
+        <style>
+            label.error {
+                color: red;
+                font-weight: bold;
+                background: transparent url(/web-static-demo/jquery-validation/images/unchecked.gif) no-repeat left center;
+                padding-left: 18px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="span6 offset3 well">
+                <h2 id="intothis">Into this</h2>
+                <form id="validation" class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email address</label>
+                        <div class="controls">
+                            <input type="email" name="email" id="email">
+                            <p class="help-block">
+                                Email address we can contact you on
+                            </p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="emailAgain">Email again</label>
+                        <div class="controls">
+                            <input type="email" id="emailAgain" name="emailAgain">
+                            <p class="help-block">
+                                And again, to check for speeling miskates
+                            </p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="terms-and-conditions">Legal</label>
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox" id="termsAndConditions" name="termsAndConditions">
+                                I agree to the <a href="#">terms and conditions</a> </label>
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            Test Validation <i class="icon-ok icon-white"></i>
+                        </button>
+                        <br>
+                        (go ahead, nothing is sent anywhere)
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="/web-static/jquery/js/jquery.js"></script>
+        <script src="/web-static/bootstrap/js/bootstrap.js"></script>
+        <script src="/web-static/jquery-validation/js/jquery.validate.js"></script>
+        <script src="/web-static/jquery-validation/js/localization/messages_zh.js"></script>
+
+        <script src="validation.demo.js"></script>
+
+    </body>
+</html>
