@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../css/demos.css" rel="stylesheet" type="text/css" />
+        <title>Jsrender Demo</title>
+    </head>
+    <body>
+        <h3>Render template against local data</h3>
+
+        <script id="movieTemplate" type="text/x-jsrender">
+            <div>
+            {{:#index+1}}: <b>{{>name}}</b> ({{>releaseYear}})
+            </div>
+        </script>
+
+        <div id="movieList"></div>
+
+        <script src="/web-static/jquery/js/jquery.js"></script>
+        <script src="/web-static/jsrender/js/jsrender.js"></script>
+        <script src="jsrender.demo.1.js"></script>
+    </body>
+</html>
