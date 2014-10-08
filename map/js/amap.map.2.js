@@ -3,7 +3,8 @@ var mapObj = new AMap.Map("container", {
     view : new AMap.View2D({
         center : position,
         zoom : 14,
-        rotation : 0
+        rotation : 0,
+        resizeEnable: true
     }),
     lang : "zh_cn"
 });
