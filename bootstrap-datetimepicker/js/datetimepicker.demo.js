@@ -1,7 +1,7 @@
 $(function() {
     $('.form_datetime').datetimepicker({
-        language: 'zh-CN',
-        format: 'yyyy-mm-dd hh:ii:ss',
+        //language: 'zh-CN',
+        //format: 'yyyy-mm-dd hh:ii:ss',
         weekStart : 1,
         todayBtn : 1,
         autoclose : 1,
