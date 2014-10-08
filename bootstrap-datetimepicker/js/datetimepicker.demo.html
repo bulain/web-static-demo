@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+        <link rel="stylesheet" href="/web-static/bootstrap/css/bootstrap.css"/>
+        <link rel="stylesheet" href="/web-static/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css"/>
+
+        <!--[if lt IE 9]>
+        <script src="/web-static/html5shiv/js/html5shiv.js"></script>
+        <script src="/web-static/respond/js/respond.src.js"></script>
+        <script src="/web-static/es5-shim/js/es5-shim.js"></script>
+        <![endif]-->
+
+        <title>bootstrap-datetimepicker Demo</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form action="" class="form-horizontal">
+                <fieldset>
+                    <legend>
+                        Test
+                    </legend>
+                    <div class="control-group">
+                        <label class="control-label">DateTime Picking</label>
+                        <div class="controls input-append date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                            <input size="16" type="text" value="" readonly>
+                            <span class="add-on"><i class="icon-remove"></i></span>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" />
+                        <br/>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Date Picking</label>
+                        <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input size="16" type="text" value="" readonly>
+                            <span class="add-on"><i class="icon-remove"></i></span>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" />
+                        <br/>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Time Picking</label>
+                        <div class="controls input-append date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                            <input size="16" type="text" value="" readonly>
+                            <span class="add-on"><i class="icon-remove"></i></span>
+                            <span class="add-on"><i class="icon-th"></i></span>
+                        </div>
+                        <input type="hidden" id="dtp_input3" value="" />
+                        <br/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <script src="/web-static/jquery/js/jquery.js"></script>
+        <script src="/web-static/bootstrap/js/bootstrap.js"></script>
+        <script src="/web-static/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script src="/web-static/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+        
+        <script src="datetimepicker.demo.js"></script>
+
+    </body>
+</html>
