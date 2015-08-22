@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0"/>
+		<title>Mobile Webapp</title>
+		<link href="/web-static/ionic/css/ionic.min.css" rel="stylesheet"/>
+		<link href="style.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+
+		<div class="bar bar-header bar-positive">
+			<a class="button button-clear icon-left ion-arrow-left-c" href="index.html">返回</a>
+			<div class="title">Form</div>
+		</div>
+
+		<div class="content">
+			<div class="list">
+				<div class="item item-divider">占位提示</div>
+				<label class="item item-input">
+					<input type="text" placeholder="First Name">
+				</label>
+				<label class="item item-input">
+					<input type="text" placeholder="Last Name">
+				</label>
+				<label class="item item-input">
+					<textarea placeholder="Comments"></textarea>
+				</label>
+
+				<div class="item item-divider">内联提示</div>
+				<label class="item item-input">
+					<span class="input-label">Username</span>
+					<input type="text">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">Password</span>
+					<input type="password">
+				</label>
+
+				<div class="item item-divider">堆栈提示</div>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" placeholder="John">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last Name</span>
+					<input type="text" placeholder="Suhr">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email</span>
+					<input type="text" placeholder="john@suhr.com">
+				</label>
+
+				<div class="item item-divider">浮动提示</div>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">First Name</span>
+					<input type="text" placeholder="First Name">
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">Last Name</span>
+					<input type="text" placeholder="Last Name">
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">Email</span>
+					<input type="text" placeholder="Email">
+				</label>
+
+				<div class="item item-divider">Input Inset</div>
+				<div class="item item-input-inset">
+					<label class="item-input-wrapper">
+						<input type="text" placeholder="Email">
+					</label>
+					<button class="button button-small">
+						Submit
+					</button>
+				</div>
+
+				<div class="item item-divider">Input Icon</div>
+				<label class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input type="text" placeholder="Search">
+				</label>
+
+				<div class="item item-divider">Toggle</div>
+				<div class="item item-toggle">
+					你是否欠我钱
+					<label class="toggle">
+						<input type="checkbox">
+						<div class="track">
+							<div class="handle"></div>
+						</div>
+					</label>
+				</div>
+
+				<div class="item item-divider">Checkbox</div>
+				<div class="item item-checkbox">
+					<label class="checkbox">
+						<input type="checkbox">
+					</label>
+					Flux Capacitor
+				</div>
+
+				<div class="item item-divider">Radio</div>
+				<label class="item item-radio">
+					<input type="radio" name="group">
+					<div class="item-content">
+						Android
+					</div>
+					<i class="radio-icon ion-checkmark"></i>
+				</label>
+				<label class="item item-radio">
+					<input type="radio" name="group">
+					<div class="item-content">
+						iOS
+					</div>
+					<i class="radio-icon ion-checkmark"></i>
+				</label>
+
+				<div class="item item-divider">Range</div>
+				<div class="item range range-positive">
+					<i class="icon ion-ios-sunny-outline"></i>
+					<input type="range" name="volume" min="0" max="100" value="33">
+					<i class="icon ion-ios-sunny"></i>
+				</div>
+
+				<div class="item item-divider">Select</div>
+				<label class="item item-input item-select">
+					<div class="input-label">
+						Lightsaber
+					</div>
+					<select>
+						<option>Blue</option>
+						<option selected>Green</option>
+						<option>Red</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="bar bar-footer bar-balanced item-input-inset">
+				<label class="item-input-wrapper">
+					<i class="icon ion-ios-search placeholder-icon"></i>
+					<input type="search" placeholder="Search">
+				</label>
+				<button class="button button-clear">
+					Cancel
+				</button>
+			</div>
+
+		</div>
+	</body>
+
+</html>

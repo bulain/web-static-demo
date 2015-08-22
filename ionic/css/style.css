@@ -1,0 +1,13 @@
+html {
+	overflow: auto;
+}
+
+.content{
+	padding-top: 44px;
+	padding-bottom: 44px;    
+}
+
+.bar.bar-header, .bar.bar-footer{
+	position: fixed;
+}
+
