@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1-3-1布局</title>
+		<style type="text/css">
+			body{
+				margin: 0 auto;
+				min-width: 600px;
+			}			
+			.clearfix:before, .clearfix:after {
+			    content: " ";
+			    display: table;
+			}
+			.clearfix:after {
+			    clear: both;
+			}
+			.container{
+				text-align: center;
+				min-width: 300px;
+				overflow: auto;
+			}
+			.header{
+				background: #00FF00;
+			}
+			.footer{
+				background: #00FFFF;
+			}
+			.content{
+				
+			}
+			.mainWrap1{
+				width: 100%;
+				margin-left: -100px;
+				float: left;
+			}
+			.mainWrap2{
+				height: 100%;
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+			.main{
+				background: #0000FF;					
+				float: left;	
+				width: 100%;
+				height: 300px;
+				margin-right: -100px;		
+			}
+			.menu1{
+				background: #C0C0C0;				
+				width: 100px;		
+				float: left;		
+			}
+			.menu2{
+				background: #C0C0C0;				
+				width: 100px;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">Header</div>
+			<div class="content clearfix">				
+				<div class="mainWrap1">
+					<div class="mainWrap2 clearfix">
+						<div class="menu1">菜单1</div>
+						<div class="main">主要内容</div>	
+					</div>
+				</div>
+				<div class="menu2">菜单2</div>
+			</div>
+			<div class="footer">Footer</div>
+		</div>
+	</body>
+</html>
