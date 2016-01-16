@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+        <link rel="stylesheet" href="/web-static/bootstrap/v3/css/bootstrap.css"/>
+
+        <!--[if lt IE 9]>
+        <script src="/web-static/html5shiv/js/html5shiv.js"></script>
+        <script src="/web-static/respond/js/respond.min.js"></script>
+        <script src="/web-static/es5-shim/js/es5-shim.js"></script>
+        <![endif]-->
+
+        <title>Angular JS List Demo</title>
+    </head>
+
+    <body ng-app="app">
+        <div class="container" ng-controller="loginCtrl">
+            <div>
+                <h3>列表信息</h3>
+                <div class="row">
+                    <div class="col-xs-2">用户名</div>
+                    <div class="col-xs-2">昵称</div>
+                    <div class="col-xs-2">邮箱</div>
+                    <div class="col-xs-2">激活状态</div>
+                    <div class="col-xs-2">动作</div>
+                </div>
+                <div class="row" ng-repeat="d in list">
+                    <div class="col-xs-2">{{d.login}}</div>
+                    <div class="col-xs-2">{{d.nick}}</div>
+                    <div class="col-xs-2">{{d.email}}</div>
+                    <div class="col-xs-2">{{d.active}}</div>
+                    <div class="col-xs-2"><a href="javascript:void(0);" ng-click="edit(d.id)">编辑</a></div>
+                </div>
+            </div>
+            <div>
+                <h3>明细信息</h3>
+                <div>
+                    <label>用户名</label><div><input type="hidden" ng-model="data.id"/><input type="text" ng-model="data.login"/></div>
+                </div>
+                <div>
+                    <label>昵称</label><div><input type="text" ng-model="data.nick"/></div>
+                </div>
+                <div>
+                    <label>邮箱</label><div><input type="text" ng-model="data.email"/></div>
+                </div>
+                <div>
+                    <label>激活状态</label><div><input type="text" ng-model="data.active"/></div>
+                </div>
+                <div><button class="btn btn-primary" ng-click="save()">保存</button></div>
+            </div>
+        </div>
+        
+        <script src="/web-static/jquery/v1/js/jquery.min.js"></script>
+        <script src="/web-static/bootstrap/v3/js/bootstrap.min.js"></script>
+        <script src="/web-static/angular/v1/js/angular.min.js"></script>
+        <script src="angular.list.js"></script>
+    </body>
+</html>
