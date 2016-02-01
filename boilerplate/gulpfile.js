@@ -4,7 +4,13 @@ var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var autoprefixer = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
+var rimraf = require('gulp-rimraf');
 
+gulp.task('clean', function () {
+    gulp.src('dist', { read: false })
+    .pipe(rimraf());
+});
 
 gulp.task('csslint', function() {
     gulp.src('css/*.css')
@@ -26,12 +32,14 @@ gulp.task('cssnano', function() {
         remove:true 
     }))
     .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('uglify', function() {
     gulp.src('js/*.js')
     .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist'));
 });
 
