@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="renderer" content="webkit">
+
+        <link rel="stylesheet" href="/web-static/bootstrap/v3/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/web-static-demo/boilerplate/css/main.css"/>
+
+        <!--[if lt IE 9]>
+        <script src="/web-static/modernizr/js/modernizr.min.js"></script>
+        <script src="/web-static/respond/js/respond.min.js"></script>
+        <![endif]-->
+
+        <title>前端布局</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>网格布局</h2>
+            <div class="row">
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">.col-md-8</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-6">.col-md-6</div>
+            </div>
+            
+            <hr/>
+            <h2>表格布局</h2>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Login Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tom</td>
+                        <td>Wang</td>
+                        <td>tom.wang</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>James</td>
+                        <td>Zhu</td>
+                        <td>james.zhu</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bulain</td>
+                        <td>Peng</td>
+                        <td>bulain.peng</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr />
+            <h2>表单布局</h2>
+            <div>
+                <div class="form-group has-success">
+                  <label class="control-label" for="inputSuccess1">Input with success</label>
+                  <input type="text" class="form-control" id="inputSuccess1">
+                </div>
+                <div class="form-group has-warning">
+                  <label class="control-label" for="inputWarning1">Input with warning</label>
+                  <input type="text" class="form-control" id="inputWarning1">
+                </div>
+                <div class="form-group has-error">
+                  <label class="control-label" for="inputError1">Input with error</label>
+                  <input type="text" class="form-control" id="inputError1">
+                </div>
+                <div class="has-success">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="checkboxSuccess" value="option1">
+                      Checkbox with success
+                    </label>
+                  </div>
+                </div>
+                <div class="has-warning">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="checkboxWarning" value="option1">
+                      Checkbox with warning
+                    </label>
+                  </div>
+                </div>
+                <div class="has-error">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="checkboxError" value="option1">
+                      Checkbox with error
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group has-success has-feedback">
+                  <label class="control-label" for="inputSuccess2">Input with success</label>
+                  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                  <label class="control-label" for="inputWarning2">Input with warning</label>
+                  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+                  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+                  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+                </div>
+                <div class="form-group has-error has-feedback">
+                  <label class="control-label" for="inputError2">Input with error</label>
+                  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                  <span id="inputError2Status" class="sr-only">(error)</span>
+                </div>
+                <div class="form-group has-success has-feedback">
+                  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                  </div>
+                  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                </div>
+            </div>
+            
+            <hr />
+            <h2>按钮样式</h2>
+            <div>
+                <button type="button" class="btn btn-default">（默认样式）Default</button>
+                <button type="button" class="btn btn-primary">（首选项）Primary</button>
+                <button type="button" class="btn btn-success">（成功）Success</button>
+                <button type="button" class="btn btn-info">（一般信息）Info</button>
+                <button type="button" class="btn btn-warning">（警告）Warning</button>
+                <button type="button" class="btn btn-danger">（危险）Danger</button>
+                <button type="button" class="btn btn-link">（链接）Link</button>
+            </div>
+            <hr />
+            
+        </div>
+        
+        <script src="/web-static/jquery/v1/js/jquery.min.js"></script>
+        <script src="/web-static/bootstrap/v3/js/bootstrap.min.js"></script>
+        <script src="/web-static-demo/boilerplate/js/main.js"></script>
+    </body>
+</html>
