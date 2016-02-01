@@ -9,24 +9,24 @@ var rename = require('gulp-rename');
 var rimraf = require('gulp-rimraf');
 
 gulp.task('clean', function () {
-    gulp.src('dist', { read: false })
+    return gulp.src('dist', { read: false })
     .pipe(rimraf());
 });
 
 gulp.task('csslint', function() {
-    gulp.src('css/*.css')
+    return gulp.src('css/*.css')
     .pipe(csslint({'shorthand' : false}))
     .pipe(csslint.reporter());
 }); 
 
 gulp.task('jshint', function() {
-    gulp.src('js/*.js')
+    return gulp.src('js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter());
 });
 
 gulp.task('cssnano', function() {
-    gulp.src('css/*.css')
+    return gulp.src('css/*.css')
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade:true, 
@@ -40,7 +40,7 @@ gulp.task('cssnano', function() {
 });
 
 gulp.task('uglify', function() {
-    gulp.src('js/*.js')
+    return gulp.src('js/*.js')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
