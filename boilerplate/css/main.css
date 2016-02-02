@@ -1,3 +1,7 @@
+.wrapper {
+    margin-top: 51px;
+}
+
 .row div {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -9,4 +13,8 @@
 
 a {
     transition: transform 1s;
+}
+
+.last-child {
+    border-left: 0;
 }

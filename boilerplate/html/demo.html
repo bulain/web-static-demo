@@ -18,149 +18,226 @@
     </head>
 
     <body>
-        <div class="container">
-            <h2>网格布局</h2>
-            <div class="row">
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
-              <div class="col-md-1">.col-md-1</div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
             </div>
-            <div class="row">
-              <div class="col-md-8">.col-md-8</div>
-              <div class="col-md-4">.col-md-4</div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Default</a></li>
+                <li><a href="#">Static top</a></li>
+                <li class="active"><a href="#">Fixed top <span class="sr-only">(current)</span></a></li>
+              </ul>
             </div>
-            <div class="row">
-              <div class="col-md-4">.col-md-4</div>
-              <div class="col-md-4">.col-md-4</div>
-              <div class="col-md-4">.col-md-4</div>
+          </div>
+        </nav>
+        <div class="wrapper">
+            <div class="container">
+                <h2>网格布局</h2>
+                <div class="row">
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                  <div class="col-md-1">.col-md-1</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8">.col-md-8</div>
+                  <div class="col-md-4">.col-md-4</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">.col-md-4</div>
+                  <div class="col-md-4">.col-md-4</div>
+                  <div class="col-md-4">.col-md-4</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">.col-md-6</div>
+                  <div class="col-md-6">.col-md-6</div>
+                </div>
+                
+                <hr/>
+                <h2>表格布局</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Login Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Tom</td>
+                            <td>Wang</td>
+                            <td>tom.wang</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>James</td>
+                            <td>Zhu</td>
+                            <td>james.zhu</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Bulain</td>
+                            <td>Peng</td>
+                            <td>bulain.peng</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <h2>表单布局</h2>
+                <div>
+                    <div class="form-group has-success">
+                      <label class="control-label" for="inputSuccess1">Input with success</label>
+                      <input type="text" class="form-control" id="inputSuccess1">
+                    </div>
+                    <div class="form-group has-warning">
+                      <label class="control-label" for="inputWarning1">Input with warning</label>
+                      <input type="text" class="form-control" id="inputWarning1">
+                    </div>
+                    <div class="form-group has-error">
+                      <label class="control-label" for="inputError1">Input with error</label>
+                      <input type="text" class="form-control" id="inputError1">
+                    </div>
+                    <div class="has-success">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="checkboxSuccess" value="option1">
+                          Checkbox with success
+                        </label>
+                      </div>
+                    </div>
+                    <div class="has-warning">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="checkboxWarning" value="option1">
+                          Checkbox with warning
+                        </label>
+                      </div>
+                    </div>
+                    <div class="has-error">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="checkboxError" value="option1">
+                          Checkbox with error
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                      <label class="control-label" for="inputSuccess2">Input with success</label>
+                      <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                      <span id="inputSuccess2Status" class="sr-only">(success)</span>
+                    </div>
+                    <div class="form-group has-warning has-feedback">
+                      <label class="control-label" for="inputWarning2">Input with warning</label>
+                      <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+                      <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+                      <span id="inputWarning2Status" class="sr-only">(warning)</span>
+                    </div>
+                    <div class="form-group has-error has-feedback">
+                      <label class="control-label" for="inputError2">Input with error</label>
+                      <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+                      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                      <span id="inputError2Status" class="sr-only">(error)</span>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                      <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+                      </div>
+                      <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                      <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                    </div>
+                </div>
+                
+                <hr />
+                <h2>按钮样式</h2>
+                <div>
+                    <button type="button" class="btn btn-default">（默认样式）Default</button>
+                    <button type="button" class="btn btn-primary">（首选项）Primary</button>
+                    <button type="button" class="btn btn-success">（成功）Success</button>
+                    <button type="button" class="btn btn-info">（一般信息）Info</button>
+                    <button type="button" class="btn btn-warning">（警告）Warning</button>
+                    <button type="button" class="btn btn-danger">（危险）Danger</button>
+                    <button type="button" class="btn btn-link">（链接）Link</button>
+                </div>
+                <hr />
+                
+                <h2>中文样式</h2>
+                <div>
+                    <div class="form-group has-success has-feedback">
+                      <label class="control-label">长度</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入长度"/>
+                        <span class="input-group-addon last-child">米</span>
+                      </div>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                      <label class="control-label">金额</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">￥</span>
+                        <input type="text" class="form-control" placeholder="请输入金额"/>
+                        <span class="input-group-addon last-child">元</span>
+                      </div>
+                    </div>
+                </div>
+                <hr />
+                
+                <h2>徽章</h2>
+                <div>
+                    <a href="#">Inbox <span class="badge">42</span></a>
+                    <button class="btn btn-primary" type="button">
+                      Messages <span class="badge">4</span>
+                    </button>
+                </div>
+                <hr />
+                
+                <h2>按钮图标</h2>
+                <div>
+                    <a href="#"><i class="glyphicon glyphicon-search"></i> Inbox</a>
+                    <button class="btn btn-primary" type="button">
+                      <i class="glyphicon glyphicon-user"></i> Messages
+                    </button>
+                </div>
+                <hr />
+                
             </div>
-            <div class="row">
-              <div class="col-md-6">.col-md-6</div>
-              <div class="col-md-6">.col-md-6</div>
-            </div>
-            
-            <hr/>
-            <h2>表格布局</h2>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Login Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Tom</td>
-                        <td>Wang</td>
-                        <td>tom.wang</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>James</td>
-                        <td>Zhu</td>
-                        <td>james.zhu</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Bulain</td>
-                        <td>Peng</td>
-                        <td>bulain.peng</td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr />
-            <h2>表单布局</h2>
-            <div>
-                <div class="form-group has-success">
-                  <label class="control-label" for="inputSuccess1">Input with success</label>
-                  <input type="text" class="form-control" id="inputSuccess1">
-                </div>
-                <div class="form-group has-warning">
-                  <label class="control-label" for="inputWarning1">Input with warning</label>
-                  <input type="text" class="form-control" id="inputWarning1">
-                </div>
-                <div class="form-group has-error">
-                  <label class="control-label" for="inputError1">Input with error</label>
-                  <input type="text" class="form-control" id="inputError1">
-                </div>
-                <div class="has-success">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" id="checkboxSuccess" value="option1">
-                      Checkbox with success
-                    </label>
-                  </div>
-                </div>
-                <div class="has-warning">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" id="checkboxWarning" value="option1">
-                      Checkbox with warning
-                    </label>
-                  </div>
-                </div>
-                <div class="has-error">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox" id="checkboxError" value="option1">
-                      Checkbox with error
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group has-success has-feedback">
-                  <label class="control-label" for="inputSuccess2">Input with success</label>
-                  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-                  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                  <span id="inputSuccess2Status" class="sr-only">(success)</span>
-                </div>
-                <div class="form-group has-warning has-feedback">
-                  <label class="control-label" for="inputWarning2">Input with warning</label>
-                  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
-                  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-                  <span id="inputWarning2Status" class="sr-only">(warning)</span>
-                </div>
-                <div class="form-group has-error has-feedback">
-                  <label class="control-label" for="inputError2">Input with error</label>
-                  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
-                  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                  <span id="inputError2Status" class="sr-only">(error)</span>
-                </div>
-                <div class="form-group has-success has-feedback">
-                  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">@</span>
-                    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
-                  </div>
-                  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                </div>
-            </div>
-            
-            <hr />
-            <h2>按钮样式</h2>
-            <div>
-                <button type="button" class="btn btn-default">（默认样式）Default</button>
-                <button type="button" class="btn btn-primary">（首选项）Primary</button>
-                <button type="button" class="btn btn-success">（成功）Success</button>
-                <button type="button" class="btn btn-info">（一般信息）Info</button>
-                <button type="button" class="btn btn-warning">（警告）Warning</button>
-                <button type="button" class="btn btn-danger">（危险）Danger</button>
-                <button type="button" class="btn btn-link">（链接）Link</button>
-            </div>
-            <hr />
-            
         </div>
         
         <script src="/web-static/jquery/v1/js/jquery.min.js"></script>
