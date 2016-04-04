@@ -3,10 +3,12 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
     plugins: [commonsPlugin],
-    entry: "./react/js/react.demo.js",
+    entry: {
+        react: "./react/js/react.demo.js"
+    },
     output: {
         path: './react/dist/',
-        filename: "react.demo.js"
+        filename: "[name].demo.js"
     },
     module: {
         loaders: [
